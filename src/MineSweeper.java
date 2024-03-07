@@ -1,6 +1,5 @@
 import java.util.Random;
 import java.util.Scanner;
-
 public class MineSweeper {
     Scanner scanner = new Scanner(System.in);
     int totalRows, totalColumns, userColumn, userRow;
