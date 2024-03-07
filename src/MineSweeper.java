@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 public class MineSweeper {
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in); // 1. Değişkenler ve fonksiyonlar anlaşılır bir şekilde isimlendirildi
     int totalRows, totalColumns, userColumn, userRow;
     String[][] userMinefield;
     String[][] adminMinefield;
@@ -53,7 +53,7 @@ public class MineSweeper {
         }
     }
 
-    public void placeMines() {
+    public void placeMines() {  // 8. Diziye uygun sayıda rastgele mayın yerleştirildi
         int totalMineCount = (totalRows * totalColumns) / 4;
         int currentMineCount = 0;
         Random rand = new Random();
@@ -72,7 +72,7 @@ public class MineSweeper {
         }
     }
 
-    public void startGame() {
+    public void startGame() { // 13. eğer mayına basarsa oyunu bitiriyor, 14. oyun kazanılıyorsa yine burada gösteriliyor, aynı şekilde 15. adım burada gerçekleşiyor
         int winCondition = (totalRows * totalColumns) - (totalRows * totalColumns) / 4;
         int currentInput = 0;
         while (currentInput < winCondition) {
@@ -94,7 +94,7 @@ public class MineSweeper {
         }
     }
 
-    public void getRowColumn() {
+    public void getRowColumn() { // 9.  Kullanıcıdan işaretlemek istediği satır ve sütun bilgisi alınıyor, Kullanıcının seçtiği nokta dizinin sınırları içerisinde mi kontrol ediyor ona göre hata veriyor
         while (true) {
             System.out.print("Enter the row: ");
             userRow = scanner.nextInt();
@@ -112,7 +112,7 @@ public class MineSweeper {
         }
     }
 
-    public int[][] calculateDistance() {
+    public int[][] calculateDistance() { // 12. Girilen noktada mayın yoksa etrafındaki mayın sayısı veya 0 değeri yerine yazıyor
         int[][] distanceMatrix = new int[totalRows][totalColumns];
 
         for (int i = 0; i < totalRows; i++) {
@@ -126,7 +126,7 @@ public class MineSweeper {
         return distanceMatrix;
     }
 
-    public int countMines(int[][] distanceMatrix) {
+    public int countMines(int[][] distanceMatrix) { // mayın sayısı alındı 
         int mineCount = 0;
 
         for (int i = 0; i < totalRows; i++) {
