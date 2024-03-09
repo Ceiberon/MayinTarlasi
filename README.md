@@ -1,4 +1,4 @@
-#Java dilinde yazılmış Mayın tarlası oyunu#
+#Java 21 dilinde yazılmış Mayın tarlası oyunu#
 
 Kullanılan teknolojiler  Java
 
